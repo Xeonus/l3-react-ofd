@@ -2,21 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .bg-gradient {
+    background: linear-gradient(to right, #2F0743, #41295a) fixed;
+  }
+}
+
 @layer components {
   .btn {
     @apply inline-flex whitespace-nowrap justify-center items-center gap-3 cursor-pointer rounded-lg select-none ease-in duration-200 border border-transparent px-3 py-2 md:px-3 md:py-3;
   }
 
   .btn-nav {
-    @apply hover:text-rose-400 px-5 py-5 md:px-3 md:py-3;
+    @apply hover:text-pink-400 px-5 py-5 md:px-3 md:py-3;
   }
 
   .btn-primary {
-    @apply text-white hover:opacity-60 bg-rose-400;
+    @apply text-white hover:opacity-60 bg-pink-400;
   }
 
   .btn-secondary {
-    @apply text-black border-black hover:bg-neutral-200 bg-rose-400 border-0 text-white;
+    @apply text-white border-teal-400 hover:bg-teal-200 bg-teal-400 border-0;
   }
 
   .btn-small {
@@ -24,12 +30,12 @@
   }
 
   .btn-disabled {
-    @apply cursor-not-allowed bg-neutral-700 text-slate-800 pointer-events-none;
+    @apply cursor-not-allowed bg-gray-300 text-gray-500 pointer-events-none;
   }
 }
 
 body {
-  @apply antialiased;
+  @apply antialiased bg-blue-50;
 }
 
 .text-link,
@@ -37,11 +43,11 @@ p > a {
   text-decoration: underline;
 
   @apply transition-opacity duration-200 ease-out;
-  @apply hover:opacity-70;
+  @apply hover:opacity-70 text-pink-500;
 }
 
 * {
-  @apply outline-neutral-200;
+  @apply outline-teal-200;
 }
 
 p + * {
@@ -49,7 +55,7 @@ p + * {
 }
 
 ::selection {
-  @apply bg-neutral-200;
+  @apply bg-pink-200;
 }
 
 svg#preloader {
@@ -59,12 +65,12 @@ svg#preloader {
 
 svg #plug,
 svg #socket {
-  fill: #4f46e5;
+  fill: #00a9b5;
 }
 
 svg #loop-normal {
   fill: none;
-  stroke: #4f46e5;
+  stroke: #00a9b5;
   stroke-width: 12;
 }
 
@@ -132,12 +138,13 @@ button[data-testid="component-big-button"] {
 
 /* Toast Styles */
 .Toastify__toast {
-  border: 1px rgb(51 65 85) solid;
-  background-color: transparent !important;
+  border: 1px rgb(0 169 181) solid;
+  background-color: rgba(255, 255, 255, 0.8) !important;
   backdrop-filter: blur(10px);
 }
 .Toastify__toast .Toastify__toast-body {
   align-items: flex-start;
+  color: #00a9b5;
 }
 .Toastify__toast-body .Toastify__toast-icon {
   margin-top: 2px;

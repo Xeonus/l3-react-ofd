@@ -23,19 +23,19 @@ module.exports = {
 			},
 			colors: {
 				layout: {
-					primary: "#111827",
-					secondary: "#e5e7eb",
+					primary: "#f0f9ff", // Light blue background
+					secondary: "#fed7e2", // Light pink
 				},
 				card: {
-					header: "#030617",
-					primary: "#020617",
-					secondary: "#1e293b",
+					header: "#00a9b5", // Teal
+					primary: "#ffffff", // White
+					secondary: "#fce7f3", // Very light pink
 				},
 				text: {
-					header: "#95A3B8",
-					subheader: "#677180",
-					primary: "#94a3b8",
-					secondary: "#e2e8f0",
+					header: "#0891b2", // Dark teal
+					subheader: "#6b7280", // Gray
+					primary: "#0e7490", // Darker teal
+					secondary: "#0c4a6e", // Dark blue
 				},
 			},
 		},
